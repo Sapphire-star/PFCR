@@ -1,0 +1,26 @@
+data_path: 'dataset/office-arts/'
+pq_data: OA
+benchmark_filename: [train, valid, test]
+alias_of_item_id: [item_id_list]
+load_col:
+  inter: [user_id, item_id_list, item_id]
+neg_sampling: ~
+transform: ~
+
+topk: [10, 50]
+metrics: [Recall, NDCG]
+valid_metric: Recall@10
+stopping_step: 10
+gpu_id : 0
+learning_rate: 0.001
+epoch: 100
+
+train_stage: pretrain
+pretrain_epochs: 100
+save_step: 10
+train_batch_size: 1024
+
+index_path: dataset/office-arts
+index_pretrain_dataset: A
+filter_id_suffix: filtered_id
+checkpoint_dir : 'save_OA/'

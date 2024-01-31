@@ -1,0 +1,19 @@
+data_path: 'dataset/or-pantry/'
+
+benchmark_filename: [train, valid, test]
+alias_of_item_id: [item_id_list]
+load_col:
+  inter: [user_id, item_id_list, item_id]
+neg_sampling: ~
+
+train_stage: pretrain
+pretrain_epochs: 10
+save_step: 10
+train_batch_size: 1024
+
+index_path: dataset/or-pantry
+index_pretrain_dataset: OP
+filter_id_suffix: filtered_id
+gpu_id: 1
+checkpoint_dir : 'save_OP/'
+epsilon: 0.3
