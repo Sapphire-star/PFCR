@@ -39,7 +39,7 @@ python all_pq.py --gpu_id 0
 ```bash
 python fed_pretrain.py
 ```
-Before train, You need to modify the relevant configuration in the configuration files `props/VQRec.yaml` and `props/pretrain.yaml`. 
+Before train, you need to modify the relevant configuration in the configuration files `props/VQRec.yaml` and `props/pretrain.yaml`. 
 
 Here are some important parameters in `props/pretrain.yaml` you may need to modify:
 
