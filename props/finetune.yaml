@@ -1,5 +1,5 @@
 data_path: 'dataset/or-pantry/'
-pq_data: OP
+pq_data: OP # 进行PQ索引时用的数据集缩写，比如如果是将“OR Pantry”一起进行索引的这里就是OP
 benchmark_filename: [train, valid, test]
 alias_of_item_id: [item_id_list]
 load_col:
@@ -19,6 +19,6 @@ save_step: 10
 train_batch_size: 1024
 
 index_path: dataset/or-pantry
-index_pretrain_dataset: P
+index_pretrain_dataset: P #进行微调的单个数据集首字母缩写
 filter_id_suffix: filtered_id
 checkpoint_dir : 'save_OP/'
