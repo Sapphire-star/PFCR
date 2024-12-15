@@ -12,7 +12,7 @@ save_step: 10
 train_batch_size: 1024
 
 index_path: dataset/or-pantry
-index_pretrain_dataset: OP
+index_pretrain_dataset: OP #训练数据集的首字母缩写，比如"OR-Pantry"就是OP
 filter_id_suffix: filtered_id
 gpu_id: 1
 checkpoint_dir : 'save_OP/'
