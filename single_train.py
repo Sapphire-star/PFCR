@@ -79,7 +79,7 @@ def finetune(model_name, dataset, pretrained_file='', finetune_mode='', **kwargs
 
     # configurations initialization
     config = Config(model=VQRec, dataset=dataset, config_file_list=props, config_dict=kwargs)
-    config_A = Config(model=VQRec, dataset='P', config_file_list=props, config_dict=kwargs)
+    config_A = Config(model=VQRec, dataset='P', config_file_list=props, config_dict=kwargs) #这里的P要进行设置，是要进行微调的单个数据集的首字母缩写
     init_seed(config['seed'], config['reproducibility'])
     init_seed(config_A['seed'], config['reproducibility'])
     # logger initialization
@@ -138,7 +138,7 @@ def finetune(model_name, dataset, pretrained_file='', finetune_mode='', **kwargs
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', type=str, default='VQRec', help='model name')
-    parser.add_argument('-d', type=str, default='OP', help='dataset name')
+    parser.add_argument('-d', type=str, default='OP', help='dataset name') # 这里是索引的两个数据集的首字母缩写
     parser.add_argument('-p', type=str, default='', help='pre-trained model path')
     parser.add_argument('-f', type=str, default='', help='fine-tune mode')
     args, unparsed = parser.parse_known_args()
